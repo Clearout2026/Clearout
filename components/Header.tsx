@@ -14,9 +14,6 @@ export default function Header() {
           <a href="#contact" className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-blue-800">
             Contact
           </a>
-          <Link href="/dashboard" className="bg-green-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-green-700">
-            Admin
-          </Link>
         </nav>
       </div>
     </header>
