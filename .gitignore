@@ -1,0 +1,15 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+build
+dist
+.vercel
+.idea
+*.swp
+*.swo
+~*

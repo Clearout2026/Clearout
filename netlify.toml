@@ -1,0 +1,13 @@
+[build]
+command = "npm install --legacy-peer-deps && npm run build"
+publish = ".next"
+functions = "app/api"
+
+[build.environment]
+NODE_VERSION = "20"
+NEXT_PUBLIC_IBAN = "CH89370400440532013000"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
