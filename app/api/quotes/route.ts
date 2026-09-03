@@ -14,14 +14,14 @@ export async function POST(request: NextRequest) {
     // Send email via Resend
     if (process.env.RESEND_API_KEY) {
       try {
-        await fetch('https://api.resend.com/emails', {
+        const response = await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
           },
           body: JSON.stringify({
-            from: 'ClearOut <onboarding@resend.dev>',
+            from: 'onboarding@resend.dev',
             to: data.email,
             subject: '✓ Votre demande de devis ClearOut',
             html: `
@@ -34,6 +34,9 @@ export async function POST(request: NextRequest) {
             `,
           }),
         })
+        const result = await response.json()
+        console.log('Resend response:', result)
+        if (!response.ok) console.error('Resend error:', result)
       } catch (emailError) {
         console.error('Error sending email:', emailError)
       }
