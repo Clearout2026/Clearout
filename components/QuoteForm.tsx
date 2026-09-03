@@ -25,7 +25,7 @@ export default function QuoteForm() {
     setLoading(true)
 
     try {
-      const response = await fetch('/api/quotes', {
+      const response = await fetch('https://formspree.io/f/mjyvrdez', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
