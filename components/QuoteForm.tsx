@@ -25,16 +25,22 @@ export default function QuoteForm() {
     setLoading(true)
 
     try {
+      const formDataToSend = new FormData()
+      Object.keys(formData).forEach(key => {
+        formDataToSend.append(key, formData[key as keyof typeof formData])
+      })
+
       const response = await fetch('https://formspree.io/f/mjyvrdez', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: formDataToSend
       })
 
       if (response.ok) {
         setSuccess(true)
         setFormData({ name: '', email: '', phone: '', service: '', description: '' })
         setTimeout(() => setSuccess(false), 5000)
+      } else {
+        console.error('Form submission failed:', response.status)
       }
     } catch (error) {
       console.error('Error:', error)
