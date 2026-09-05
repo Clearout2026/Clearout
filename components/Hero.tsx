@@ -2,19 +2,22 @@
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-gray-100 to-white py-20 px-6 text-center">
+    <section className="bg-gradient-to-br from-green-600 via-green-500 to-teal-500 py-24 px-6 text-center text-white">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          Débarrassez-vous sans effort
+        <h1 className="text-6xl font-bold mb-6">
+          Débarras & Nettoyage à Fribourg
         </h1>
-        <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Récupérez votre espace en quelques heures. Devis gratuit en une photo.
+        <p className="text-xl mb-3 max-w-2xl mx-auto">
+          Récupérez votre espace en quelques heures. <strong>Nettoyage inclus!</strong>
+        </p>
+        <p className="text-lg mb-12 max-w-2xl mx-auto font-semibold">
+          ♻️ Engagement écolo: tri, réutilisation, recyclage responsable
         </p>
         <div className="flex gap-6 justify-center mb-12 flex-wrap">
-          <a href="#quote" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800">
+          <a href="#quote" className="bg-white text-green-600 px-8 py-3 rounded-xl font-bold hover:bg-green-50 shadow-lg">
             Commencer
           </a>
-          <a href="#services" className="bg-gray-100 text-gray-900 px-8 py-3 rounded-lg font-semibold border-2 border-gray-300 hover:bg-gray-50">
+          <a href="#services" className="bg-green-700 text-white px-8 py-3 rounded-xl font-semibold border-2 border-white hover:bg-green-800 shadow-lg">
             En savoir plus
           </a>
         </div>
